@@ -70,7 +70,8 @@ def pregunta_03():
     Entrenamiento del modelo sobre todo el conjunto de datos.
     Complete el código presentado a continuación.
     """
-
+    import numpy as np
+    import pandas as pd
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = pd.read_csv("gm_2008_region.csv")
 
@@ -90,8 +91,8 @@ def pregunta_03():
     # un vector con valores entre el máximo y el mínimo de X_fertility
     prediction_space = np.linspace(
         X_fertility.min(),
-        X_fertility.max,
-    ).reshape(50, 1)
+        X_fertility.max(),
+    ).reshape(50,1)
 
     # Entrene el modelo usando X_fertility y y_life
     reg.fit(X_fertility, y_life)
