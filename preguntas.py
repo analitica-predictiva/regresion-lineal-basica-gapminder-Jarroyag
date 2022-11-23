@@ -109,7 +109,8 @@ def pregunta_04():
     Particionamiento del conjunto de datos usando train_test_split.
     Complete el código presentado a continuación.
     """
-
+    import numpy as np
+    import pandas as pd
     # Importe LinearRegression
     # Importe train_test_split
     # Importe mean_squared_error
@@ -136,7 +137,7 @@ def pregunta_04():
     )
 
     # Cree una instancia del modelo de regresión lineal
-    linearRegression = linearRegression()
+    linearRegression = LinearRegression()
 
     # Entrene el clasificador usando X_train y y_train
     linearRegression.fit(X_train, y_train)
